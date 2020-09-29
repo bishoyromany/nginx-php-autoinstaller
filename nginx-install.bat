@@ -11,7 +11,14 @@ if not exist D:\nginx\php mkdir D:\nginx\php
 if exist D:\nginx\www echo www Folder Already Exist
 if not exist D:\nginx\www mkdir D:\nginx\www
 
-set emptyVar=
+REM create mission dirs
+mkdir D:\nginx\logs
+mkdir D:\nginx\temp
+mkdir D:\nginx\temp\client_body_temp
+mkdir D:\nginx\temp\fastcgi_temp
+mkdir D:\nginx\temp\proxy_temp
+mkdir D:\nginx\temp\scgi_temp
+mkdir D:\nginx\temp\uwsgi_temp
 
 echo.> D:\nginx\logs\access.log
 echo.> D:\nginx\logs\error.log
