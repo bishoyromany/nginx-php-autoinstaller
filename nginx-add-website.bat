@@ -25,5 +25,5 @@ ECHO Generated Config File Into %configSetPath%
 
 rem set Web Path and create the project folder
 if %gitRepo%==NONE mkdir D:\nginx\www\%domainName%
-if not %gitRepo%==NONE git clone gitRepo %domainName%
+if not %gitRepo%==NONE git clone %gitRepo% D:\nginx\www\%domainName%
 ECHO Generated Project Folder Into D:\nginx\www\%domainName%
