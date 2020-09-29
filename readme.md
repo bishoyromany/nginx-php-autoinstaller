@@ -14,10 +14,19 @@
 
 ## What are the available actions ?
 
-1. Start nginx server, and PHP by running `nginx-start`.
-2. Stop nginx server, and PHP by running `nginx-stop`.
-3. Restart nginx server, and PHP by running `nginx-restart`.
-4. Install environment variables, and creating required folders by running `nginx-install`.
+1. Create new website by running `nginx-add-website`.
+
+   #### You'd be asked to add the following inputs
+
+   1. website domain name [default sample.nginx]
+   2. webiste type [default laravel]
+   3. website github repository [default none -> generates an empty folder, with hello worled index file]
+   4. to view the website just run, `nginx-restart` then visit the domain name you entered, by default it's [sample.nginx](http://smaple.nginx)
+
+2. Start nginx server, and PHP by running `nginx-start`.
+3. Stop nginx server, and PHP by running `nginx-stop`.
+4. Restart nginx server, and PHP by running `nginx-restart`.
+5. Install environment variables, and creating required folders by running `nginx-install`.
 
 ## What is the structure of the folder
 
@@ -35,6 +44,7 @@ D:\nginx -> Root Folder
     nginx-restart.bat -> restart server and php
     nginx-start.bat   -> start nginx server and php
     nginx-stop.bat    -> stop nginx server and php
+    nginx-add-website.bat    -> Create new project, with default nginx settings, like virtaul domain name etc...
     set-system-variables.ps1 -> set environment paths
 ```
 
@@ -48,6 +58,7 @@ Jsut replace D: into the following files by your custom path:
 3. d:\nginx\conf\sites-enabled\*.conf
 4. d:\nginx\nginx-install.bat
 5. d:\nginx\nginx-start.bat
+6. d:\nginx\nginx-add-website.bat
 
 ## How can i add a custom virtual domain
 
