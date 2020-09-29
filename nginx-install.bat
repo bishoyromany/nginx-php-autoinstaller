@@ -11,8 +11,10 @@ if not exist D:\nginx\php mkdir D:\nginx\php
 if exist D:\nginx\www echo www Folder Already Exist
 if not exist D:\nginx\www mkdir D:\nginx\www
 
-echo > D:\nginx\logs\access.txt
-echo > D:\nginx\logs\error.txt
-echo > D:\nginx\logs\nginx.pid
+set emptyVar=
+
+echo.> D:\nginx\logs\access.log
+echo.> D:\nginx\logs\error.log
+echo.> D:\nginx\logs\nginx.pid
 
 EXIT /b
