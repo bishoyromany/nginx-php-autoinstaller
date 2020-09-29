@@ -1,3 +1,5 @@
 php
 www
 conf/sites-enabled
+logs
+!logs/.gitKeep
