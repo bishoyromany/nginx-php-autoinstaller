@@ -6,7 +6,7 @@
    ```bash
     git pull https://github.com/bishoyromany/nginx-php-autoinstaller
    ```
-2. Extract it into **Parition D** in your hdd
+2. Extract it into **Partition D** in your hdd
 3. Enter **D:\nginx** Folder
 4. Open command line in **Administrator mode**, and run `./nginx-install.bat`, then restart your cmd.
 5. Download php and extract the ZIP file into **D:\nginx\php**
