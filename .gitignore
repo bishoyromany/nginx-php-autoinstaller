@@ -3,3 +3,5 @@ www
 conf/sites-enabled
 logs
 !logs/.gitKeep
+.env.bat
+/temp

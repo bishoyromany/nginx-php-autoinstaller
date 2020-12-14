@@ -15,8 +15,8 @@ ECHO 127.0.0.1	%domainName%>>"C:/Windows/System32/drivers/etc\hosts"
 ECHO Added Website %domainName% To Hosts File
 
 rem Set Configs Paths
-set configSamplePath=D:\nginx\conf\sites-enabled-sample\
-set configSetPath=D:\nginx\conf\sites-enabled\%domainName%.conf
+set configSamplePath=G:\nginx\conf\sites-enabled-sample\
+set configSetPath=G:\nginx\conf\sites-enabled\%domainName%.conf
 
 rem Handle The Configs
 if %projectType% == laravel cp %configSamplePath%laravel.conf %configSetPath% && powershell -Command "(gc %configSetPath%) -replace '%projectType%.nginx', '%domainName%' | Out-File -encoding ASCII %configSetPath%"
@@ -24,6 +24,6 @@ if not %projectType% == laravel cp %configSamplePath%default.conf %configSetPath
 ECHO Generated Config File Into %configSetPath%
 
 rem set Web Path and create the project folder
-if %gitRepo%==NONE mkdir D:\nginx\www\%domainName% && echo Hello World > D:\nginx\www\%domainName%\index.html
-if not %gitRepo%==NONE git clone %gitRepo% D:\nginx\www\%domainName%
-ECHO Generated Project Folder Into D:\nginx\www\%domainName%
+if %gitRepo%==NONE mkdir G:\nginx\www\%domainName% && echo Hello World > G:\nginx\www\%domainName%\index.html
+if not %gitRepo%==NONE git clone %gitRepo% G:\nginx\www\%domainName%
+ECHO Generated Project Folder Into G:\nginx\www\%domainName%
