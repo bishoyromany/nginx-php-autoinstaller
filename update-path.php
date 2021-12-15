@@ -11,6 +11,10 @@ $enabledSites = __DIR__."/conf/sites-enabled";
 $enabledSitesFiles = glob($enabledSites."/*.conf");
 $enabledSitesFiles[] = __DIR__."/conf/nginx.conf";
 $enabledSitesFiles[] = __DIR__."/set-system-veriables.ps1";
+$enabledSitesFiles[] = __DIR__."/nginx-start.bat";
+foreach(glob(__DIR__."conf/sites-enabled-sample/*.conf") as $file){
+    $enabledSitesFiles[] = $file;
+}
 
 foreach($enabledSitesFiles as $file){
     fixFilePaths($file, $oldPath, $default_path);
